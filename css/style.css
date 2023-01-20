@@ -16,13 +16,14 @@ body {
   background-size: cover;
 }
 
-img {
+#infos img {
   max-width: 40vw;
   background-color: #f2f2f2;
   border-radius: 5px;
+  margin-bottom: var(--margin-bottom);
 }
 
-h1, h3 {
+h1, h2, h3 {
   font-family: 'Exo', sans-serif;
 }
 
@@ -114,22 +115,27 @@ ul.type-list {
   text-align: center;
 }
 
-.type-list .fire > * {
+.fire {
   background-color: #fd7d24;
   color: white;
 }
 
-.type-list .water > * {
+.fly {
+  background: linear-gradient(180deg, #3dc7ef 50%, #bdb9b8 50%);
+  color: white;
+}
+
+.water {
   background-color: #4592c4;
   color: white;
 }
 
-.type-list .ground > * {
+.ground {
   background: linear-gradient(180deg, #f7de3f 50%, #ab9842 50%);
   color: black;
 }
 
-.type-list .rock > * {
+.rock {
   background-color: #a38c21;
   color: white;
 }
@@ -138,6 +144,8 @@ ul.type-list {
   background-color: #a4a4a4;
   border-radius: 5px;
   padding: 0.5rem;
+  max-width: 40vw;
+  margin: auto;
 }
 
 .stats h3 {
@@ -265,8 +273,82 @@ ul.type-list {
 .stats.speed-14 > div > div:nth-of-type(1n + 82):not(:nth-of-type(1n+96)) { background-color: #30a7d7; }
 .stats.speed-15 > div > div:nth-of-type(1n + 81):not(:nth-of-type(1n+96)) { background-color: #30a7d7; }
 
+
+#evolution {
+  width: calc(90% - 10px);
+  background-color: rgba(60, 60, 60, 0.7);
+  padding: 10px;
+  border-radius: 5px;
+  margin: var(--margin-bottom) auto;
+}
+
+#evolution h2 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: white;
+  font-weight: 400;
+}
+
+#evolution > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#evolution > div > :not(.pokemon)::after {
+  font-family: bootstrap-icons !important;
+  content: "\f285";
+  color: white;
+  font-size: 3rem;
+}
+
+#evolution .pokemon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+#evolution .pokemon > img {
+  border-radius: 100%;
+  background-color: #616161;
+  width: 50%;
+  border: 0.3rem solid white;
+  box-shadow: 0 4px 4px 0px #212121;
+}
+
+#evolution .pokemon > span {
+  font-family: 'Exo', sans-serif;
+  color: white;
+}
+
+#evolution .pokemon > span > small {
+  font-family: 'Exo', sans-serif;
+  color: #a4acaf;
+  font-weight: 500;
+}
+
+#evolution .pokemon > button {
+  width: 7rem;
+  border-radius: 5px;
+  border: none;
+  padding: 0.2rem 0;
+}
+
 @media screen and (max-width: 500px) {
   .flex > .w-50 {
+    width: 100%;
+  }
+
+  #evolution > div {
+    flex-direction: column;
+  }
+
+  #evolution > div > :not(.pokemon)::after {
+    content: "\F279";
+  }
+
+  #evolution .pokemon > button {
     width: 100%;
   }
 }
