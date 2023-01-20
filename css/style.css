@@ -11,6 +11,11 @@
   font-family: 'Roboto', sans-serif;
 }
 
+body {
+  background-image: url('https://assets.pokemon.com/static2/_ui/img/chrome/container_bg.png');
+  background-size: cover;
+}
+
 img {
   max-width: 40vw;
   background-color: #f2f2f2;
@@ -23,7 +28,9 @@ h1, h3 {
 
 h1 {
   text-align: center;
-  margin-bottom: 3rem;
+  padding: 1rem 0 3rem 0;
+  background-color: white;
+  border-radius: 0 0 30px 30px;
 }
 
 h3 {
