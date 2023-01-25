@@ -11,3 +11,13 @@ window.onload = function () {
   console.log({ kgWeight });
   specificationsWeight.textContent = `${kgWeight}kg`;
 }
+
+const pokemon = 'Ditto';
+async function pokeApi (){
+
+  const api = await fetch("https://pokeapi.co/api/v2/pokemon/"+ pokemon);
+  const apiDonnes = await api.json();
+  
+  console.log(apiDonnes);
+}
+pokeApi();
