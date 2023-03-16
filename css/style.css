@@ -422,6 +422,10 @@ img{
   margin: auto;
   padding: 5px;
   border-radius: 10px;
+  
+}
+.modifer:hover{
+  cursor: pointer;
 }
 .recherche input{
   width: 30%;
