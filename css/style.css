@@ -422,10 +422,11 @@ img{
   margin: auto;
   padding: 5px;
   border-radius: 10px;
-  
 }
 .modifer:hover{
   cursor: pointer;
+  background-color: black;
+  color: white;
 }
 .recherche input{
   width: 30%;
